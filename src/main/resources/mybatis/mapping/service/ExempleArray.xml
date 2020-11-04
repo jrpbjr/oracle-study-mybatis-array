@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+ 
+<mapper namespace="com.oracle.mybatis.dao.UserDao">
+    <select id= "EMP_DATE_INSERT" parameterType="hashmap" statementType="CALLABLE">
+    { call SCOTT.EMP_DATA_INSERT(#{dsInput,javaType=Object,jdbcType=Array,jdbcTypeName=EMP_LIST, mode=IN, typeHandler=com.oracle.mybatis.ListMapTypeHandler},#{result,mode=OUT,jdbcType=VARCHAR}) }
+    </select>
+</mapper>
